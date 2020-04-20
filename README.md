@@ -1,3 +1,12 @@
+# Kundi's json-vat fork
+
+## Why we made this fork
+
+Since the original gem uses an API which has been discontinued ([jsonvat.com](http://jsonvat.com)), we had to come up with an alternative solution to reliably get VAT rates in our apps. Our temporary solution is to read from a file (instead of doing a call to a dead API) and wait for a better solution from a community. Since these values rarely change, this solution should be good enough for a while. We anticipate the original gem's data source will be fixed in the near future, and then we'll switch back to the original gem. 
+
+
+⤵️ Original Repo description (from where we forked it - https://github.com/adamcooke/json-vat):
+
 # JSON VAT
 
 You'll likely have heard about the impending ~~doom~~ changes which will hit EU tech businesses in January 2015. At present, there is no government sponsored API for accessing the current VAT rates for a given country. This very simple Ruby client allows you to access up-to-date VAT rates for any EU country.
