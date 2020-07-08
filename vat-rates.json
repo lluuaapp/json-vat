@@ -464,8 +464,8 @@
         {
           "effective_from": "0000-01-01",
           "rates": {
-            "reduced": 7.0,
-            "standard": 19.0
+            "reduced": 5.0,
+            "standard": 16.0
           }
         }
       ]
