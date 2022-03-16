@@ -9,6 +9,7 @@ Gem::Specification.new do |s|
   s.licenses    = ['MIT']
   s.summary     = "A client library for jsonvat.com"
   s.description = "Allows you to easily lookup VAT rats for EU countries based on the data from jsonvat.com."
-  s.files = Dir["{lib}/**/*"]
-  s.add_dependency "json", "~> 1.7"
+  s.files       = Dir["{lib}/**/*"]
+  s.files       += Dir['vat-rates.json']
+  s.add_dependency "json", ">= 1.7"
 end
