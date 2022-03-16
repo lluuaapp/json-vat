@@ -17,7 +17,7 @@ module JSONVAT
     end
 
     def host
-      @host ||= 'https://raw.githubusercontent.com/kundi/json-vat/master/vat-rates.json'
+      @host ||= 'https://raw.githubusercontent.com/lluuaapp/json-vat/master/vat-rates.json'
     end
 
     attr_writer :cache_backend
@@ -25,8 +25,9 @@ module JSONVAT
     attr_writer :host
 
     def download
-      # Net::HTTP.get_response(URI.parse(self.host)).body.force_encoding("utf-8")
-      file_path = File.join(File.dirname(__FILE__), '../vat-rates.json' )
+      Net::HTTP.get_response(URI.parse(host)).body.force_encoding('utf-8')
+    rescue StandardError
+      file_path = File.join(File.dirname(__FILE__), '../vat-rates.json')
       File.read(file_path)
     end
 
